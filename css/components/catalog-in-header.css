@@ -1,0 +1,155 @@
+.main .header .catalog-in-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-height: calc(650 / 16 * 1rem);
+  background-color: var(--white);
+  padding-top: 2.5rem;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+  padding-bottom: 2.5rem;
+  overflow-y: auto;
+
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s opacity ease;
+}
+
+@media (max-width: 600px) {
+  .main .header .catalog-in-header {
+    max-height: inherit;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.main .header .popup-toggle.open .catalog-in-header {
+  height: initial;
+  visibility: visible;
+  opacity: 1;
+  z-index: 11;
+}
+
+.main .header .catalog-in-header .catalog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  column-gap: 3.75rem;
+  row-gap: 2.5rem;
+  /* высота контейнера фиксированная */
+  /* должна быть больше любой из колонок */
+  height: calc(1000 / 16 * 1rem);
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .main .header .catalog-in-header .catalog {
+    flex-wrap: nowrap;
+    height: inherit;
+  }
+}
+
+@media (max-width: 1650px) {
+  .main .header .catalog-in-header .catalog {
+    /* высота контейнера фиксированная */
+    /* должна быть больше любой из колонок */
+    height: calc(1200 / 16 * 1rem);
+  }
+}
+
+.main .header .catalog-in-header .catalog ul {
+  /* width: calc(100% / 5); */
+  width: calc(300 / 16 * 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main .header .catalog-in-header .catalog ul li.title a {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.main .header .catalog-in-header .catalog ul li.item {
+  height: initial;
+  visibility: visible;
+  opacity: 1;
+}
+
+.main .header .catalog-in-header .catalog ul li.item--hidden {
+  display: none;
+}
+
+.main .header .catalog-in-header .catalog ul li.item a {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.main .header .catalog-in-header .catalog ul li.item a,
+.main .header .catalog-in-header .catalog ul li.title a {
+  text-decoration: none;
+  color: var(--black);
+  transition: 0.3s color ease;
+}
+
+.main .header .catalog-in-header .catalog ul li.item a:hover,
+.main .header .catalog-in-header .catalog ul li.title a:hover {
+  color: var(--orange);
+}
+
+.main .header .catalog-in-header .catalog ul li.more {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.main .header .catalog-in-header .catalog ul li.more {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.main .header .catalog-in-header .catalog ul li.more::after {
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../../images/icons/chevron.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+
+  transition: 0.3s transform ease;
+}
+
+.main .header .catalog-in-header .catalog ul li.more--expanded::after {
+  transform: rotate(180deg);
+}
+
+.close-catalog-in-header {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../../images/icons/close.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  float: right;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .close-catalog-in-header {
+    display: block;
+    visibility: visible;
+    pointer-events: all;
+  }
+}

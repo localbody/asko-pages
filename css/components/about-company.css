@@ -1,0 +1,66 @@
+.main .about-company {
+  display: flex;
+  gap: 10rem;
+}
+
+@media (max-width: 600px) {
+  .main .about-company {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.main .about-company .column {
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .main .about-company .column {
+    width: 100%;
+  }
+}
+
+.main .about-company .column--items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 2.5rem;
+}
+
+@media (max-width: 1650px) {
+  .main .about-company .column--items {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main .about-company .column-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.main .about-company .circle {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-position: center;
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-color: var(--orange);
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+
+.main .about-company .circle--location {
+  background-image: url(../../images/icons/location--white.svg);
+}
+
+.main .about-company .circle--star {
+  background-image: url(../../images/icons/star--white.svg);
+}
+
+.main .about-company .circle--color-swatch {
+  background-image: url(../../images/icons/color-swatch--white.svg);
+}
+
+.main .about-company .circle--medal {
+  background-image: url(../../images/icons/medal--white.svg);
+}

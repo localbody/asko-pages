@@ -1,0 +1,50 @@
+.main .partners {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.875rem;
+  height: 4.75rem;
+  position: relative;
+  /* padding-left: 5.75rem; */
+  /* padding-right: 5.75rem; */
+}
+
+.main .partners .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.main .partners .slider-button-prev,
+.main .partners .slider-button-next {
+  position: absolute;
+  z-index: 10;
+  width: 2.875rem;
+  height: 2.875rem;
+  background-position: center right;
+
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main .partners .slider-button-prev {
+  background-image: url(../../images/icons/arrow-right.svg);
+  transform: rotate(180deg);
+  left: 0;
+}
+
+.main .partners .slider-button-next {
+  background-image: url(../../images/icons/arrow-right.svg);
+
+  right: 0;
+}
+
+.main .partners .slide {
+  height: 4.75rem;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: none;
+}

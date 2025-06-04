@@ -1,0 +1,67 @@
+.main .container--schemes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 2.5rem;
+}
+
+@media (max-width: 1650px) {
+  .main .container--schemes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main .container--schemes .scheme {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.main .container--schemes .scheme .scheme__overlay {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.0625rem solid var(--grey-3);
+}
+
+.main .container--schemes .scheme .scheme__overlay::after {
+  content: '';
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--orange);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url(../../images/icons/zoom-in.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.5rem;
+}
+
+.main .container--schemes .scheme .scheme__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.75rem;
+}
+
+.main .container--schemes .scheme .scheme__description {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--grey-1);
+}
+
+.main .container--schemes .scheme--big {
+  grid-template-rows: 280px 1fr;
+  justify-content: center;
+}
+
+.main .container--schemes .scheme--small {
+  grid-template-rows: 200px 1fr;
+}
+
+.main .container--schemes .schemes__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}

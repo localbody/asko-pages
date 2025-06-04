@@ -1,0 +1,216 @@
+.main.blog-article .page-header {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .main.blog-article .page-header {
+    display: grid;
+    height: fit-content;
+    margin-bottom: 32px;
+  }
+}
+
+.blog-article__header {
+  height: calc(496 / 16 * 1rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-article__header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-article__header .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc(108 / 16 * 1rem);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 600px) {
+  .blog-article__header .overlay {
+    height: 160px;
+  }
+}
+
+.blog-article__header .overlay .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .blog-article__header .overlay .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.blog-article__header .overlay .title {
+  font-size: 3rem;
+  line-height: 3.375rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+@media (max-width: 600px) {
+  .blog-article__header .overlay .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.blog-article__header .overlay .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .blog-article__header .overlay .wrapper {
+    align-self: flex-start;
+  }
+}
+
+.blog-article__header .overlay .date,
+.blog-article__header .overlay .timer {
+  color: var(--white);
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 500;
+}
+
+.blog-article__header .overlay .timer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-article__header .overlay .timer::before {
+  content: '';
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../../images/icons/timer.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.blog-article__header .overlay .divider {
+  height: 1.25rem;
+  width: 0.0625rem;
+  background: white;
+}
+
+.blog-article__diviver {
+  height: 1.5rem;
+}
+
+.blog-article__title {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+}
+
+.blog-article__subtitle {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.blog-article__paragraph {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.blog-article__paragraph--1columns {
+  grid-template-columns: 1fr;
+}
+
+.blog-article__paragraph--2columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.blog-article__paragraph--2columns .easy-slider__images {
+  max-height: 280px;
+}
+
+@media (max-width: 600px) {
+  .blog-article__paragraph--2columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-article__paragraph p {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--grey-1);
+}
+
+.blog-article__paragraph .image-wrapper {
+  width: 100%;
+  height: calc(280 / 16 * 1rem);
+  overflow: hidden;
+}
+
+.blog-article__paragraph .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-article__paragraph .slider {
+  background-color: wheat;
+}
+
+.blog-article__author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 0;
+}
+
+.blog-article__author > .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.blog-article__author > .wrapper .inner {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--grey-1);
+}
+
+.blog-article__author > .inner b {
+  font-weight: 500;
+}
+
+.blog-article__author img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  border-radius: 3.5rem;
+  overflow: hidden;
+}
+
+.blog-article__author::after {
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../../images/icons/share.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.blog-article__sidebar .tabs .tabs-item {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}

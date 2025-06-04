@@ -1,0 +1,68 @@
+.main .contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main .contact .address {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.main .contact .address .work-time {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: var(--grey-1);
+}
+
+.main .contact .address .wrapper {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.main .contact .address .mail,
+.main .contact .address .phone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main .contact .address .mail a,
+.main .contact .address .phone a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.main .contact .address .mail::before,
+.main .contact .address .phone::before {
+  content: '';
+  width: 2.625rem;
+  height: 2.625rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-color: var(--grey-4);
+  border-radius: 100%;
+}
+.main .contact .address .mail::before {
+  background-image: url(../../images/icons/sms.svg);
+}
+
+.main .contact .address .phone::before {
+  background-image: url(../../images/icons/call.svg);
+}
+
+.main .contact .address .mail a {
+  color: var(--black);
+}
+
+.main .contact .map img {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .main .contact .map img {
+    margin-top: 24px;
+  }
+}
