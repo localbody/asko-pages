@@ -1,3 +1,18 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 500;
+  color: var(--grey-1);
+}
+
+.checkbox a {
+  color: var(--black);
+  text-decoration: none;
+}
+
 .text--ac {
   font-weight: 700;
   font-size: 4rem;
@@ -7,8 +22,8 @@
 @media (max-width: 600px) {
   .text--ac {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
   }
 }
 
@@ -35,8 +50,8 @@
 @media (max-width: 600px) {
   .text--number {
     font-weight: 500;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
   }
 }
 
@@ -75,8 +90,8 @@
 
 @media (max-width: 600px) {
   .text--h4 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -88,8 +103,8 @@
 
 @media (max-width: 600px) {
   .text--title-16 {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -126,8 +141,8 @@
 
 @media (max-width: 600px) {
   .text--title-16 {
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -236,8 +251,8 @@
 
 @media (max-width: 600px) {
   .button--big {
-    font-size: 12px;
-    line-height: 24px;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -405,6 +420,10 @@
   justify-content: space-between;
 }
 
+.flex--align-center {
+  align-items: center;
+}
+
 .content--orange {
   width: 100%;
   background-color: var(--orange);
@@ -439,7 +458,7 @@
 }
 
 .mb-12 {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .pb--8 {

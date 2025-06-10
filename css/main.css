@@ -26,6 +26,7 @@
 @import url(./components/sidebar__product.css);
 @import url(./components/easy-slider.css);
 @import url(./components/mobile.css);
+@import url(./components/captcha.css);
 
 @import url(./pages/catalog-category.css);
 @import url(./pages/catalog-category-product.css);
@@ -39,7 +40,7 @@
 @import url(./pages/project.css);
 
 :root {
-  --font-size: 16;
+  --font-size: 16px;
   --desktop-width: 1608px;
 }
 
@@ -62,9 +63,6 @@ body {
   font-weight: 400;
   color: var(--black);
   font-size: var(--font-size);
-}
-
-@media (max-width: 1650px) {
 }
 
 ul {

@@ -14,11 +14,13 @@
 }
 
 .main .accordion .title {
+  display: flex;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
   position: relative;
   padding-bottom: 0.5rem;
+  padding-right: 2rem;
   cursor: pointer;
 }
 
